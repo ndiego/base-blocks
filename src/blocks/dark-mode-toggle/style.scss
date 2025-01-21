@@ -1,0 +1,27 @@
+.wp-block-base-dark-mode-toggle {
+    display: flex;
+    gap: 1px;
+    justify-content: start;
+
+    button {
+        background: none;
+        border: none;
+        padding: 0;
+        color: color-mix(in srgb, currentColor, transparent 55%);
+        cursor: pointer;
+        line-height: 0;
+        transition: all var(--wp--custom--transition--duration, 200ms) ease;
+
+        &:hover {
+            color: var(--wp--preset--color--theme-6, #121212);
+        }
+        
+        &[data-active="true"] {
+            color: var(--wp--preset--color--theme-6, #121212);
+        }
+    }
+    
+    svg {
+        display: block;
+    }
+}

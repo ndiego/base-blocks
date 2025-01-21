@@ -1,0 +1,26 @@
+{
+  "apiVersion": 3,
+  "name": "base/dark-mode-toggle",
+  "title": "Dark Mode Toggle",
+  "category": "theme",
+  "description": "Toggle between light and dark mode.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "base-blocks",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default",
+      "isDefault": true
+    },
+    {
+      "name": "single",
+      "label": "Single Icon"
+    }
+  ]
+}
