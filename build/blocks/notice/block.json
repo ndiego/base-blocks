@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "base-blocks/notice",
+  "version": "0.1.0",
+  "title": "Notice",
+  "category": "widgets",
+  "icon": "info",
+  "description": "Add a notice block with different styles.",
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "attributes": {
+    "noticeType": {
+      "type": "string",
+      "default": "note"
+    },
+    "enableColor": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "base-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

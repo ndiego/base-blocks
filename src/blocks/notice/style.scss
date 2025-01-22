@@ -1,0 +1,152 @@
+.wp-block-base-blocks-notice {
+	box-sizing: border-box;
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid;
+	border-radius: var(--wp--custom--border--radius--default, 12px);
+	background: #f8f9fa;
+	display: flex;
+	gap: 1em;
+	font-size: 0.95em;
+
+	.dark-theme & {
+		background: #2a2a2a;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	.notice-header {
+		flex-shrink: 0;
+	}
+
+	.notice-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		margin-top: 2px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: none;
+			stroke-width: 1.75;
+		}
+	}
+
+	.notice-content {
+		flex-grow: 1;
+		min-width: 0;
+
+		> * {
+			margin-block: 0;
+		}
+
+		> * + * {
+			margin-block: var(--wp--style--block-gap);
+		}
+
+		// Remove bottom margin from last block
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// Monochrome styles - moved to the end to ensure proper override
+	&.is-monochrome {
+		border-color: var(--wp--preset--color--theme-4) !important;
+		background-color: var(--wp--preset--color--theme-1) !important;
+
+		.notice-icon svg {
+			stroke: var(--wp--preset--color--theme-5) !important;
+		}
+
+		// Override dark theme styles
+		.dark-theme & {
+			border-color: var(--wp--preset--color--theme-4) !important;
+			background-color: var(--wp--preset--color--theme-1) !important;
+
+			.notice-icon svg {
+				stroke: var(--wp--preset--color--theme-5) !important;
+			}
+		}
+	}
+
+	// Note style (blue)
+	&.is-note-notice {
+		border-color: color-mix(in srgb, #0073aa 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #f0f6fc;
+
+		.notice-icon svg {
+			stroke: #0073aa;
+		}
+
+		.dark-theme & {
+			border-color: color-mix(in srgb, #3498db 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #1a2733;
+		}
+	}
+
+	// Tip style (green)
+	&.is-tip-notice {
+		border-color: color-mix(in srgb, #00a32a 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #edfaef;
+
+		.notice-icon svg {
+			stroke: #00a32a;
+		}
+
+		.dark-theme & {
+			border-color: color-mix(in srgb, #2ecc71 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #1a2922;
+		}
+	}
+
+	// Important style (purple)
+	&.is-important-notice {
+		border-color: color-mix(in srgb, #8c00a3 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #f6e6fa;
+
+		.notice-icon svg {
+			stroke: #8c00a3;
+		}
+
+		.dark-theme & {
+			border-color: color-mix(in srgb, #9b59b6 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #2a1f2d;
+		}
+	}
+
+	// Warning style (orange)
+	&.is-warning-notice {
+		border-color: color-mix(in srgb, #dba617 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #fcf9e8;
+
+		.notice-icon svg {
+			stroke: #dba617;
+		}
+
+		.dark-theme & {
+			border-color: color-mix(in srgb, #f39c12 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #332b1a;
+		}
+	}
+
+	// Caution style (red)
+	&.is-caution-notice {
+		border-color: color-mix(in srgb, #cc1818 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #fcebeb;
+
+		.notice-icon svg {
+			stroke: #cc1818;
+		}
+
+		.dark-theme & {
+			border-color: color-mix(in srgb, #e74c3c 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #331c1a;
+		}
+	}
+} 

@@ -22,5 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function base_blocks_register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/dark-mode-toggle' );
+	register_block_type( __DIR__ . '/build/blocks/notice' );
 }
 add_action( 'init', 'base_blocks_register_blocks' );
