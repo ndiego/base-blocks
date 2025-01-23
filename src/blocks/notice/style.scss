@@ -77,16 +77,16 @@
 
 	// Note style (blue)
 	&.is-note-notice {
-		border-color: color-mix(in srgb, #0073aa 30%, var(--wp--preset--color--theme-2) 70%);
-		background-color: #f0f6fc;
+		border-color: color-mix(in srgb, #3858e9 30%, var(--wp--preset--color--theme-2) 70%);
+		background-color: #f6f7fe;
 
 		.notice-icon svg {
-			stroke: #0073aa;
+			stroke: #3858e9;
 		}
 
 		.dark-theme & {
-			border-color: color-mix(in srgb, #3498db 30%, var(--wp--preset--color--theme-2) 70%);
-			background-color: #1a2733;
+			border-color: color-mix(in srgb, #4b6bff 30%, var(--wp--preset--color--theme-2) 70%);
+			background-color: #1a1d33;
 		}
 	}
 
