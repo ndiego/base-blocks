@@ -1,17 +1,17 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "base/dark-mode-toggle",
+  "version": "0.1.0",
   "title": "Dark Mode Toggle",
   "category": "theme",
   "description": "Toggle between light and dark mode.",
   "supports": {
-    "html": false
+    "html": false,
+    "spacing": {
+      "margin": true
+    }
   },
-  "textdomain": "base-blocks",
-  "editorScript": "file:./index.js",
-  "viewScript": "file:./view.js",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php",
   "styles": [
     {
       "name": "default",
@@ -19,8 +19,37 @@
       "isDefault": true
     },
     {
-      "name": "single",
-      "label": "Single Icon"
+      "name": "sun-moon",
+      "label": "Sun & Moon"
     }
-  ]
+  ],
+  "example": {
+    "viewportWidth": 200,
+    "styles": {
+      "spacing": {
+        "margin": "0"
+      }
+    },
+    "variations": [
+      {
+        "name": "default",
+        "title": "Default Style",
+        "attributes": {
+          "className": "is-style-default"
+        }
+      },
+      {
+        "name": "sun-moon",
+        "title": "Sun & Moon Style",
+        "attributes": {
+          "className": "is-style-sun-moon"
+        }
+      }
+    ]
+  },
+  "textdomain": "base-blocks",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
 }
