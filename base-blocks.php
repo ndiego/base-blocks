@@ -20,8 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Register blocks
+ */
 function base_blocks_register_blocks() {
-	register_block_type( __DIR__ . '/build/blocks/dark-mode-toggle' );
-	register_block_type( __DIR__ . '/build/blocks/notice' );
+	// Get all block.json files in the build/blocks directory
+	$block_folders = glob( plugin_dir_path( __FILE__ ) . 'build/blocks/*', GLOB_ONLYDIR );
+
+	foreach ( $block_folders as $block_folder ) {
+		if ( file_exists( $block_folder . '/block.json' ) ) {
+			register_block_type( $block_folder );
+		}
+	}
 }
 add_action( 'init', 'base_blocks_register_blocks' );
