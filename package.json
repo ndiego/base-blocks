@@ -4,7 +4,9 @@
   "description": "Custom blocks for Base theme.",
   "scripts": {
     "build": "wp-scripts build",
-    "start": "wp-scripts start"
+    "start": "wp-scripts start",
+    "lint:js:src": "wp-scripts lint-js ./src",
+    "lint:js:src:fix": "wp-scripts lint-js ./src --fix"
   },
   "devDependencies": {
     "@wordpress/scripts": "^27.4.0"
