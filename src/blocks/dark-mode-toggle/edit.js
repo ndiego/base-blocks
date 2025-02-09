@@ -9,46 +9,45 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 import { Light, System, Dark, Sun, Moon, Monitor } from './icons';
 
-export default function Edit({ attributes }) {
-    const { className } = attributes;
-	const blockProps = useBlockProps({
-		role: 'radiogroup'
-	});
-	const isSunMoonStyle = className?.includes('is-style-sun-moon');
-    console.log( attributes );
+export default function Edit( { attributes } ) {
+	const { className } = attributes;
+	const blockProps = useBlockProps( {
+		role: 'radiogroup',
+	} );
+	const isSunMoonStyle = className?.includes( 'is-style-sun-moon' );
 
 	return (
-		<div {...blockProps}>
-			<button 
+		<div { ...blockProps }>
+			<button
 				aria-checked="true"
-				aria-label={__('Switch to light theme', 'base-blocks')}
+				aria-label={ __( 'Switch to light theme', 'base-blocks' ) }
 				data-active="true"
 				data-theme-switcher="true"
 				role="radio"
 				type="button"
 			>
-				{isSunMoonStyle ? <Sun /> : <Light />}
+				{ isSunMoonStyle ? <Sun /> : <Light /> }
 			</button>
-			<button 
+			<button
 				aria-checked="false"
-				aria-label={__('Switch to system theme', 'base-blocks')}
+				aria-label={ __( 'Switch to system theme', 'base-blocks' ) }
 				data-active="false"
 				data-theme-switcher="true"
 				role="radio"
 				type="button"
 			>
-				{isSunMoonStyle ? <Monitor /> : <System />}
+				{ isSunMoonStyle ? <Monitor /> : <System /> }
 			</button>
-			<button 
+			<button
 				aria-checked="false"
-				aria-label={__('Switch to dark theme', 'base-blocks')}
+				aria-label={ __( 'Switch to dark theme', 'base-blocks' ) }
 				data-active="false"
 				data-theme-switcher="true"
 				role="radio"
 				type="button"
 			>
-				{isSunMoonStyle ? <Moon /> : <Dark />}
+				{ isSunMoonStyle ? <Moon /> : <Dark /> }
 			</button>
 		</div>
 	);
-} 
+}
