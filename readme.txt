@@ -1,31 +1,35 @@
 === Base Blocks ===
 Contributors: ndiego
-Tags: blocks, dark-mode, theme-blocks
+Tags: blocks, gutenberg, base theme
 Requires at least: 6.7
 Tested up to: 6.7
 Requires PHP: 7.4
 Stable tag: 0.1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A suite of custom blocks designed specifically for the Base WordPress theme.
+A collection of blocks for the Base theme.
 
 == Description ==
 
-Base Blocks extends the Base theme with additional custom blocks.
+Base Blocks enhances your WordPress site with custom blocks designed for the Base theme.
 
-= Current Blocks =
+Available blocks include:
 
-* Dark Mode Toggle - Add a user-friendly dark mode switcher that remembers user preferences and respects system settings.
+* **Dark Mode Toggle** - Add a customizable dark mode switcher
+* **Notice Block** - Create notices and alerts with custom styles
+* **GitHub Stats Block** - Display GitHub repository statistics
 
 == Installation ==
 
-1. Upload the `base-blocks` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Start using the blocks in your pages or posts.
+1. Upload the plugin files to `/wp-content/plugins/base-blocks`
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Use the blocks in the block editor
 
 == Changelog ==
 
 = 0.1.0 =
 * Initial release
 * Added Dark Mode Toggle block
+* Added Notice block
+* Added GitHub Stats block
