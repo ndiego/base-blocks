@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "base/github-stats",
+  "version": "0.1.0",
+  "title": "GitHub Stats",
+  "category": "widgets",
+  "description": "Display star and fork counts for a GitHub repository.",
+  "keywords": [
+    "github",
+    "repository",
+    "stats",
+    "stars",
+    "forks"
+  ],
+  "attributes": {
+    "repository": {
+      "type": "string",
+      "default": ""
+    },
+    "showStars": {
+      "type": "boolean",
+      "default": true
+    },
+    "showForks": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "typography": {
+      "fontSize": true
+    },
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    }
+  },
+  "textdomain": "base-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
