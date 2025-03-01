@@ -5,6 +5,34 @@
  * @package base-blocks
  */
 
+// Add the early theme detection script to head. This prevents a flash of unstyled content.
+add_action( 'wp_head', function() {
+	static $script_added = false;
+
+	if ( $script_added ) {
+		return;
+	}
+
+	$script_added = true;
+	?>
+	<script>
+		( function() {
+			var preference = document.cookie.match( /(?:^|;)\s*theme-preference\s*=\s*([^;]+)/ );
+			var prefersDark = window.matchMedia( '(prefers-color-scheme: dark)' );
+			
+			if ( preference ) {
+				var theme = preference[1];
+				if ( theme === 'dark' ) {
+					document.documentElement.classList.add( 'dark-theme' );
+				}
+			} else if ( prefersDark.matches ) {
+				document.documentElement.classList.add( 'dark-theme' );
+			}
+		} )();
+	</script>
+	<?php
+}, 0 );
+
 $classes    = $attributes['className'] ?? '';
 $is_sun_moon = strpos( $classes, 'is-style-sun-moon' ) !== false;
 
