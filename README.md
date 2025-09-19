@@ -1,6 +1,6 @@
 # Base Blocks
 
-A collection of blocks for the Base theme.
+A collection of blocks for the [Base](https://github.com/ndiego/base) theme.
 
 ## Description
 
